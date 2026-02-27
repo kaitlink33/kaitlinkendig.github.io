@@ -69,6 +69,7 @@
 
     /* ── HERO ── */
     .hero {
+      position: relative;
       min-height: calc(100vh - 64px);
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -87,7 +88,8 @@
     .hero-photo-wrap {
       position: absolute;
       top: -1.5rem;
-      right: -110px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 220px;
       z-index: 10;
       pointer-events: none;
@@ -483,9 +485,9 @@
       <div><div class="sl-title">Skills &amp; Interests</div><div class="sl-desc">Technical profile</div></div>
       <span class="sl-arrow">→</span>
     </a>
-    <div class="hero-photo-wrap">
+  </div>
+  <div class="hero-photo-wrap">
       <img src="portfolioPic.jpg" alt="Kaitlin Kendig" />
-    </div>
   </div>
 </div>
 
