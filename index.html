@@ -76,11 +76,33 @@
     }
 
     .hero-text {
+      position: relative;
       padding: 8vh 6vw 8vh 4vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       border-right: 1px solid var(--rule);
+    }
+
+    .hero-photo-wrap {
+      position: absolute;
+      top: -1.5rem;
+      right: -80px;
+      width: 220px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .hero-photo-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      mask-image: linear-gradient(to right, black 55%, transparent 100%),
+                  linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%);
+      mask-composite: intersect;
+      -webkit-mask-image: linear-gradient(to right, black 55%, transparent 100%),
+                          linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%);
+      -webkit-mask-composite: source-in;
     }
 
     .hero-label {
@@ -461,6 +483,9 @@
       <div><div class="sl-title">Skills &amp; Interests</div><div class="sl-desc">Technical profile</div></div>
       <span class="sl-arrow">→</span>
     </a>
+    <div class="hero-photo-wrap">
+      <img src="portfolioPic.jpg" alt="Kaitlin Kendig" />
+    </div>
   </div>
 </div>
 
